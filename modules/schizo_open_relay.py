@@ -35,7 +35,7 @@ def log_to_file_json(file_path, ip, port, mailfrom, rcpttos, data):
 	    js_data['ip'] = ip
 	    js_data['port'] = port
 	    js_data['from'] = mailfrom
-	    js_data['to'] = rcpttoss
+	    js_data['to'] = rcpttos
 	    js_data['data'] = data
 	    json_data = json.dumps(data)
             #print file_path + " " + json_data
