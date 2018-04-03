@@ -14,6 +14,7 @@ import threading
 import asyncore
 import asynchat
 
+import json
 
 output_lock = threading.RLock()
 
