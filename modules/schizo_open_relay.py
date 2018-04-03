@@ -37,9 +37,9 @@ def log_to_file_json(file_path, ip, port, mailfrom, rcpttos, data):
 	    js_data['from'] = mailfrom
 	    js_data['to'] = rcpttos
 	    js_data['data'] = data
-	    json_data = json.dumps(data)
+	    json_data = json.dumps(js_data)
             #print file_path + " " + json_data
-            f.write(message + "\n")
+            f.write(json_data + "\n")
 			
 def process_packet_for_shellcode(packet, ip, port):
     if libemu is None:
