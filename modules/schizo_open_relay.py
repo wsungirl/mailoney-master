@@ -30,14 +30,14 @@ def log_to_file(file_path, ip, port, data):
 def log_to_file_json(file_path, ip, port, mailfrom, rcpttos, data):
     with output_lock:
         with open(file_path, "a") as f:
-			js_data = {}
-			js_data['timestamp'] = datetime.datetime.now().isoformat()
-			js_data['ip'] = ip
-			js_data['port'] = port
-			js_data['from'] = mailfrom
-			js_data['to'] = rcpttoss
-			js_data['data'] = data
-			json_data = json.dumps(data)
+	    js_data = {}
+	    js_data['timestamp'] = datetime.datetime.now().isoformat()
+	    js_data['ip'] = ip
+	    js_data['port'] = port
+	    js_data['from'] = mailfrom
+	    js_data['to'] = rcpttoss
+	    js_data['data'] = data
+	    json_data = json.dumps(data)
             #print file_path + " " + json_data
             f.write(message + "\n")
 			
