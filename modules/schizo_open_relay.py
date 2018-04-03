@@ -23,7 +23,7 @@ def log_to_file(file_path, ip, port, data):
     with output_lock:
         with open(file_path, "a") as f:
             message = "[{0}][{1}:{2}] {3}".format(time.time(), ip, port, data.encode("string-escape"))
-            print file_path + " " + message
+            #print file_path + " " + message
             f.write(message + "\n")
 
 
@@ -38,7 +38,7 @@ def log_to_file_json(file_path, ip, port, mailfrom, rcpttos, data):
 			js_data['to'] = rcpttoss
 			js_data['data'] = data
 			json_data = json.dumps(data)
-            print file_path + " " + json_data
+            #print file_path + " " + json_data
             f.write(message + "\n")
 			
 def process_packet_for_shellcode(packet, ip, port):
